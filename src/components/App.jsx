@@ -20,6 +20,10 @@ export class App extends Component {
     }));
   };
 
+  changeFilter = e => {
+    this.setState({ filter: e.target.value });
+  };
+
   filterContacts = () => {
     const filter = this.state.filter.toLowerCase();
     return this.state.contacts.filter(({ name }) =>
@@ -34,20 +38,20 @@ export class App extends Component {
   };
 
   render() {
-    const { filter } = this.state;
     const visibleContacts = this.filterContacts();
     return (
       <Background>
         <Section>
           <Title>Phonebook</Title>
-        </Section>
-        <Section>
           <ContactForm onSelect={this.addNewContact} />
         </Section>
         <Section>
           <TitleContactsSection>Contacts</TitleContactsSection>
-          <Filter value={filter} />
-          <ContactList visibleContacts={visibleContacts} />
+          <Filter onChange={this.changeFilter} />
+          <ContactList
+            visibleContacts={visibleContacts}
+            onClick={this.handleClickBtnDelete}
+          />
         </Section>
       </Background>
     );
