@@ -1,4 +1,8 @@
 import styled from 'styled-components';
+import {
+  Button,
+  Input,
+} from 'components/constants/DefaultStyleComponents.styled';
 
 export const Form = styled.form`
   padding: ${props => props.theme.spacing(4)};
@@ -15,32 +19,8 @@ export const Label = styled.label`
   font-weight: ${props => props.theme.fontWeight.medium};
 `;
 
-export const Input = styled.input`
-  margin-top: ${props => props.theme.spacing(3)};
-  margin-bottom: ${props => props.theme.spacing(6)};
-  padding: ${props => props.theme.spacing(2)};
-  border: ${props => props.theme.borders.normal};
-  border-color: ${props => props.theme.colors.accent};
-  color: ${props => props.theme.colors.light};
-  font-size: ${props => props.theme.fontSizes.medium};
-  font-weight: ${props => props.theme.fontWeight.normal};
-`;
+export const InputForm = styled(Input)``;
 
-export const BtnSubmit = styled.button`
-  cursor: pointer;
-  display: block;
+export const BtnSubmit = styled(Button)`
   margin: 0 auto;
-  padding: ${props => props.theme.spacing(3)} ${props => props.theme.spacing(5)};
-  border: ${props => `1px solid ${props.theme.colors.accent}`};
-  font-size: ${props => props.theme.fontSizes.small};
-  font-weight: ${props => props.theme.fontWeight.medium};
-  color: ${props => props.theme.colors.accent};
-  background-color: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: ${props => props.theme.colors.light};
-    background-color: ${props => props.theme.colors.accent};
-  }
 `;

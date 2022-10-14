@@ -9,7 +9,7 @@ export const SectionEl = styled.section`
 `;
 
 export const Container = styled.div`
-  width: 400px;
+  width: 500px;
   padding: 0 ${props => props.theme.spacing(4)};
   margin: 0 auto;
 `;
