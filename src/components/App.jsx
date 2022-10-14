@@ -38,12 +38,13 @@ export class App extends Component {
   };
 
   render() {
+    const { contacts } = this.state;
     const visibleContacts = this.filterContacts();
     return (
       <Background>
         <Section>
           <Title>Phonebook</Title>
-          <ContactForm onSelect={this.addNewContact} />
+          <ContactForm contacts={contacts} onSelect={this.addNewContact} />
         </Section>
         <Section>
           <TitleContactsSection>Contacts</TitleContactsSection>
