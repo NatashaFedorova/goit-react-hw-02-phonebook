@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import * as yup from 'yup';
 import 'yup-phone';
 import { Formik, ErrorMessage } from 'formik';
@@ -66,6 +67,16 @@ const ContactForm = ({ contacts, onSelect }) => {
       </DataForm>
     </Formik>
   );
+};
+
+ContactForm.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default ContactForm;
