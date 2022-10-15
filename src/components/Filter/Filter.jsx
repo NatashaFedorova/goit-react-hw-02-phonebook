@@ -4,7 +4,12 @@ const FilterBlock = ({ onChange }) => {
   return (
     <>
       <Description>Find contacts by name</Description>
-      <FilterInput type="text" name="filter" onChange={onChange} />
+      <FilterInput
+        type="text"
+        name="filter"
+        onChange={onChange}
+        autoComplete="off"
+      />
     </>
   );
 };

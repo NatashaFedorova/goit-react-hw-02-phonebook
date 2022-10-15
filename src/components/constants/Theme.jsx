@@ -4,6 +4,7 @@ export const theme = Object.freeze({
     dark: '#303030',
     background: '#181515',
     accent: '#ff7700',
+    error: '#ff0000',
   },
   spacing: value => `${4 * value}px`,
   borders: {
